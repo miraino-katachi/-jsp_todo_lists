@@ -55,9 +55,6 @@ public class MainServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// フォーム送信時の文字化け対策
-		request.setCharacterEncoding("UTF-8");
-
 		// リクエストパラメータの取得
 		java.sql.Date expirationDate = java.sql.Date.valueOf(request.getParameter("expirationDate"));
 		String todoItem = request.getParameter("todoItem");
