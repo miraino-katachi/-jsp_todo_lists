@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import logic.TodoListLogic;
-import model.TodoListModel;
+import logic.TodoItemLogic;
+import model.TodoItemModel;
 
 /**
  * Servlet implementation class MainServlet
@@ -35,8 +35,8 @@ public class MainServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODOリストを取得してリクエストスコープに保存する
-		TodoListLogic logic = new TodoListLogic();
-		List<TodoListModel> list = logic.getTodoList();
+		TodoItemLogic logic = new TodoItemLogic();
+		List<TodoItemModel> list = logic.getTodoList();
 		request.setAttribute("todoList", list);
 
 		// 今日の日付を取得してリクエストスコープに保存する
@@ -63,10 +63,10 @@ public class MainServlet extends HttpServlet {
 		String todoItem = request.getParameter("todoItem");
 
 		// 取得したパラメータをレコードに保存
-		TodoListModel model = new TodoListModel();
+		TodoItemModel model = new TodoItemModel();
 		model.setExpirationDate(expirationDate);
 		model.setTodoItem(todoItem);
-		TodoListLogic logic = new TodoListLogic();
+		TodoItemLogic logic = new TodoItemLogic();
 		logic.create(model);
 
 		// メイン画面にリダイレクト

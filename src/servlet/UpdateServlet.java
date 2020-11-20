@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import logic.TodoListLogic;
-import model.TodoListModel;
+import logic.TodoItemLogic;
+import model.TodoItemModel;
 
 /**
  * Servlet implementation class UpdateServlet
@@ -48,11 +48,11 @@ public class UpdateServlet extends HttpServlet {
 		int id = Integer.parseInt(request.getParameter("id"));
 
 		// 取得したパラメータをレコードに保存
-		TodoListModel model = new TodoListModel();
+		TodoItemModel model = new TodoItemModel();
 		model.setId(id);
 		model.setIsCompleted(isCompleted);
 		model.setIsDeleted(isDeleted);
-		TodoListLogic logic = new TodoListLogic();
+		TodoItemLogic logic = new TodoItemLogic();
 		logic.update(model);
 
 		// メイン画面にリダイレクト
