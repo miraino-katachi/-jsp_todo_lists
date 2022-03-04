@@ -26,12 +26,8 @@ public class TodoListFilter implements Filter {
 			ServletResponse response,
 			FilterChain chain)
 			throws IOException, ServletException {
-
+		// 文字コードをUTF-8にする
 		request.setCharacterEncoding("UTF-8");
-
-		// このあとdoFilter()メソッドを実行すると「レスポンスをコミットした後でフォワードできません」という例外が発生する。
-		// ServletRequestをHttpServletRequestにキャストする必要がある
-// 		((HttpServletResponse) response).sendRedirect("https://minnano.miraino-katachi.com/staff/");
 
 		chain.doFilter(request, response);
 
