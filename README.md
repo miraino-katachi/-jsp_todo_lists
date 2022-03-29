@@ -12,9 +12,11 @@ https://github.com/miraino-katachi/todo_lists
 
 をご参照ください。
 
-### データベースにMySQLを使っています
+### サンプルのソースではデータベースにMySQLを使っています
 
-MySQLを使うには、
+書籍「スッキリわかるサーブレット＆JSP」と同じように、H2データベースを使っていただいて構いません。
+
+#### MySQLを使うには、
 1. XAMPP（Windows）またはMAMP（macOS）をインストールしてください。
 2. JavaからMySQLに接続するには、mysql-connector-java-5.1.48.jarが必要です。
 WebContent/WEB-INF/lib/
