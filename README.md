@@ -22,6 +22,15 @@ https://github.com/miraino-katachi/todo_lists
 WebContent/WEB-INF/lib/
 に配置します。
 
+データベースに接続するユーザー名とパスワードは下記のとおりになっています。
+##### XAMPP(Windows)
+- ユーザー名： root
+- パスワード： (空文字)
+
+##### MAMP(macOS)
+- ユーザー名： root
+- パスワード： root
+
 ### JSTLを使っています
 1. JSPでの表示のために、JSTLを使っています。
 
